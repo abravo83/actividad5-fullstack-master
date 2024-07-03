@@ -16,6 +16,8 @@ export class BlogComponent {
       id: '1',
       title: 'First Post - Hello World!',
       subtitle: 'And so the journey begins',
+      imgUrl:
+        'https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/3c/dd/62.jpg',
       content:
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil expedita deserunt minima, consectetur alias architecto eum, est perspiciatis iusto, possimus sit ex laborum earum rem vel laboriosam. Laborum, veritatis minus. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       date: '2024/07/12',
@@ -24,6 +26,8 @@ export class BlogComponent {
       id: '2',
       title: 'Where to begin',
       subtitle: 'Lost in the way',
+      imgUrl:
+        'https://www.molaviajar.com/wp-content/uploads/2016/06/golden-gate-por-la-noche-foto.jpg',
       content:
         'Quaerat vel magni nihil odio sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum alias veritatis minus beatae accusamus fugiat nostrum corporis sit accusantium itaque ad, labore sunt iusto, debitis placeat distinctio praesentium!',
       date: '2024/06/14',

@@ -34,6 +34,14 @@
   font-style: italic;
 }
 
+.post__img {
+  width: 300px;
+  float: right;
+  img {
+    width: 100%;
+  }
+}
+
 .content__input {
   width: 100%;
 }
