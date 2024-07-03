@@ -30,15 +30,25 @@ export class BlogComponent {
     },
   ];
 
-  recibirDatos(formData: NgForm) {
+  onSubmitingForm(formData: NgForm): void {
     let datosFormulario = formData.value;
+    let validation: boolean = true;
+    let errorTxt: string =
+      'Form must be fully filled. It is missing the next fields: ';
 
     for (const key in datosFormulario) {
       if (datosFormulario[key] === '') {
-        alert('Hace falta rellenar todos los datos del formulario');
-        return;
+        errorTxt += ` ${key},`;
+        validation = false;
       }
     }
+
+    if (!validation) {
+      errorTxt = errorTxt.replace(/\,$/, '.');
+      alert(errorTxt);
+      return;
+    }
+
     datosFormulario.id = this.posts.length;
     datosFormulario.date = new Date()
       .toISOString()
