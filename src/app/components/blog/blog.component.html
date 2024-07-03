@@ -1,7 +1,7 @@
 <div class="flex__container">
   <aside class="form__aside">
     <h2 class="form__title">A great day to insert a new blog post!</h2>
-    <form #formPost="ngForm" (ngSubmit)="onSubmitingForm(formPost)">
+    <form #formPost="ngForm" (ngSubmit)="onSubmittingForm(formPost)">
       <div class="form__group">
         <label for="title">Title</label>
         <input id="title" type="text" name="title" ngModel />
@@ -30,7 +30,7 @@
   </aside>
   <section class="blog__section">
     <h1>Journey to nowhere: A Personal Blog</h1>
-    @for (post of posts; track post.id) {
+    @for (post of posts; track post.id; let even = $even; let odd = $odd) {
     <article class="post">
       <header>
         <h2>{{ post.title }}</h2>
@@ -38,7 +38,11 @@
       </header>
       <div class="post__content">
         <p>
-          <figure class="post__img">
+          <figure
+            class="post__figure"
+            [class.post__figure_even]="even"
+            [class.post__figure_odd]="odd"
+          >
             <img [src]="post.imgUrl" alt="An image of a nice view" />
           </figure>
           {{ post.content }}

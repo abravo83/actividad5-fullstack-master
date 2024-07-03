@@ -20,7 +20,7 @@ export class BlogComponent {
         'https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/3c/dd/62.jpg',
       content:
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil expedita deserunt minima, consectetur alias architecto eum, est perspiciatis iusto, possimus sit ex laborum earum rem vel laboriosam. Laborum, veritatis minus. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      date: '2024/07/12',
+      date: '2024/05/08',
     },
     {
       id: '2',
@@ -34,7 +34,7 @@ export class BlogComponent {
     },
   ];
 
-  onSubmitingForm(formData: NgForm): void {
+  onSubmittingForm(formData: NgForm): void {
     let datosFormulario = formData.value;
     let validation: boolean = true;
     let errorTxt: string =

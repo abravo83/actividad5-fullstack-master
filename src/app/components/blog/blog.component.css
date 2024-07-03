@@ -1,5 +1,6 @@
 .flex__container {
   display: flex;
+  flex-direction: column-reverse;
   height: 100%;
   width: 100%;
 }
@@ -7,8 +8,8 @@
 .form__aside {
   display: flex;
   padding: 10px;
-  flex-direction: column;
-  width: 200px;
+  flex-direction: row;
+  height: 400px;
   background: lightseagreen;
 }
 
@@ -34,12 +35,20 @@
   font-style: italic;
 }
 
-.post__img {
+.post__figure {
   width: 300px;
-  float: right;
+  margin: 10px;
   img {
     width: 100%;
   }
+}
+
+.post__figure_even {
+  float: right;
+}
+
+.post__figure_odd {
+  float: left;
 }
 
 .content__input {
@@ -49,4 +58,22 @@
 .submit__btn {
   margin-top: 10px;
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .flex__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  .form__aside {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    background: lightseagreen;
+  }
 }
